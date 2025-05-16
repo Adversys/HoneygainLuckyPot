@@ -11,7 +11,6 @@ This script automatically opens the Honeygain LuckyPot every 15 minutes via cron
 ## 🔧 Configuration
 After cloning the repository, configure your Honeygain credentials:
 
-cp secrets.py.template secrets.py
 nano secrets.py
 
 --------------------------------------
