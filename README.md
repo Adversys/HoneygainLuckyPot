@@ -38,3 +38,32 @@ bash remove_luckypot_cron.sh
 Python 3
 
 Python modules: requests, python-dotenv
+
+--------------------------------------
+
+# 🛠 HoneygainLuckyPot Test & Verification Commands
+
+## Manually run the script and check the log
+python3 luckypot.py
+cat luckypot.log
+
+## Check if the cron is installed correctly
+crontab -l
+
+## Check the live log file
+tail -f luckypot.log
+
+## Check that the secrets.py file is installed and correct
+cat secrets.py
+
+## Check that the cron is running every 15 minutes
+grep "luckypot.py" <(crontab -l)
+
+## Check folder permissions
+ls -lh /home/Adversys/HoneygainLuckyPot
+
+## Force an immediate opening of the LuckyPot
+python3 luckypot.py
+
+## Check if the required modules are installed (should return without errors)
+python3 -c "import requests, dotenv"
